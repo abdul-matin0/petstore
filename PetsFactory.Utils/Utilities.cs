@@ -5,10 +5,10 @@ namespace PetsFactory.Utils
     public static class Utilities
     {
         // users
-        public static string AdminUser = "ROLE_ADMIN";
-        public static string CustomerUser = "ROLE_CUSTOMER";
+        public const string AdminUser = "ROLE_ADMIN";
+        public const string CustomerUser = "ROLE_CUSTOMER";
 
         // notifications messages
-        public static string RequestNotification = "New Request";
+        public const string RequestNotification = "New Request";
     }
 }

@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using PetsFactory.Data.Repository.IRepository;
 using PetsFactory.Models;
 using PetsFactory.Models.ViewModels;
+using PetsFactory.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +17,7 @@ namespace PetsFactory.Areas.Admin.Controllers
     // Admin Pets CRUD Operations
 
     [Area("Admin")]
+    [Authorize(Roles = Utilities.AdminUser)]
     public class PetsController : Controller
     {
         // dbContext unitOfWork

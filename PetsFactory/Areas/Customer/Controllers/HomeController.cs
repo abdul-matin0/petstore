@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 namespace PetsFactory.Areas.Administrator.Controllers
 {
     [Area("Customer")]
+    // all users , including visitors
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

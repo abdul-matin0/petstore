@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PetsFactory.Data.Repository.IRepository;
 using PetsFactory.Models;
+using PetsFactory.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +11,10 @@ using System.Threading.Tasks;
 namespace PetsFactory.Areas.Admin.Controllers
 {
     // Pets category controller
+    // only admin user
 
     [Area("Admin")]
+    [Authorize(Roles = Utilities.AdminUser)]
     public class CategoryController : Controller
     {
         // dbContext unitOfWork

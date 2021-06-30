@@ -1,0 +1,106 @@
+﻿<!-- layout for visitors -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PetsFactory</title>
+
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <!-- bootstrap framework -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- icons -->
+    <link rel="stylesheet" type="text/css" href="~/assets/icon/themify-icons/themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="~/assets/icon/icofont/css/icofont.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/jquery.mCustomScrollbar.css" />
+</head>
+<body>
+
+    <!-- Pre-loader start -->
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div class='contain'>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+
+    <section class="login p-fixed d-flex text-center bg-primary common-img-bg">
+        <!-- Container-fluid starts -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    @RenderBody()
+                </div>
+                <!-- end of col-sm-12 -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container-fluid -->
+    </section>
+
+    <!-- scripts -->
+    <!-- jquery -->
+    <script src="~/assets/js/jquery-3.2.1.min.js"></script>
+
+    <script src="~/assets/js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/assets/js/popper.js/popper.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jquery slim scroll -->
+    <script src="~/assets/js/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.13.0/dist/sweetalert2.all.min.js"></script>
+    <script>
+        "use strict";
+        $(document).ready(function () {
+            // $('.theme-loader').addClass('loaded');
+            $('.theme-loader').animate({
+                'opacity': '0',
+            }, 1200);
+            setTimeout(function () {
+                $('.theme-loader').remove();
+            }, 2000);
+            // $('.pcoded').addClass('loaded');
+        });
+
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
