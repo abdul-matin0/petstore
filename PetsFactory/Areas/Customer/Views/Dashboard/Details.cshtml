@@ -1,0 +1,81 @@
+﻿@model Pets
+
+@{ 
+    ViewData["Title"] = "Pet Details";
+}
+    <div class="page-wrapper">
+        <!-- Page-header start -->
+        <div class="page-header card">
+            <div class="row align-items-end">
+                <div class="col-lg-8">
+                    <div class="page-header-title">
+                        <i class="icofont icofont icofont icofont-animal-cat bg-c-pink"></i>
+                        <div class="d-inline">
+                            <h4>@Model.Name</h4>
+                            <span>@ViewData["Title"]</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="page-header-breadcrumb">
+                        <ul class="breadcrumb-title">
+                            <li class="breadcrumb-item">
+                                <a asp-action="Index">
+                                    <i class="icofont icofont-home"></i>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="#!">Pet Details</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page-header end -->
+
+        <div class="page-body">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><span><i class="icofont icofont-tag text-c-blue"></i> @Model.PetCategory.CategoryName</span></h5>
+                            <span>Description</span>
+                            <div class="card-header-right">
+                                <ul class="list-unstyled card-option" style="width: 35px;">
+                                    <li class=""><i class="icofont icofont-simple-left"></i></li>
+                                    <li><i class="icofont icofont-maximize full-card"></i></li>
+                                    <li><i class="icofont icofont-minus minimize-card"></i></li>
+                                    <li><i class="icofont icofont-refresh reload-card"></i></li>
+                                    <li><i class="icofont icofont-error close-card"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <p>
+                                @Html.Raw(Model.Details)
+                            </p>
+                            <br />
+                            <a class="btn btn-primary rounded shadow" asp-controller="Dashboard" asp-action="RequestPet" asp-route-id="@Model.Id">Request For Pet</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <a asp-controller="Dashboard" asp-action="Index" class="btn btn-success btn-block mb-sm-3">View All Pets</a>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Image</h5>
+                            
+                        </div>
+                        <div class="card-block">
+                            <div class="mx-auto my-auto">
+                                <img src="@Model.PetImage" class="img-fluid" style="object-fit: cover;"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>

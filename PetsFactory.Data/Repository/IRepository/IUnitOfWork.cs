@@ -10,6 +10,8 @@ namespace PetsFactory.Data.Repository.IRepository
         public IPetsCategoryRepo PetsCategory { get; }
         public IPetsRepo Pets { get; }
         public INotificationsRepo Notifications { get; }
+        public IApplicationUserRepo ApplicationUser { get; }
+        public IRequestsRepo Requests { get; }
 
         void Save();
     }

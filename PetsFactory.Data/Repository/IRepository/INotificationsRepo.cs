@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PetsFactory.Data.Repository.IRepository
 {
-    // Pets Repository Pattern
+    // Notifications Repository Pattern
 
     public interface INotificationsRepo : IRepository<Notifications>
     {

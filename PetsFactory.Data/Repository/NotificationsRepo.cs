@@ -19,7 +19,7 @@ namespace PetsFactory.Data.Repository
             _db = db;
         }
 
-        // update Pets properties database
+        // update notifications properties database
         public void Update(Notifications notifications)
         {
             _db.Update(notifications);

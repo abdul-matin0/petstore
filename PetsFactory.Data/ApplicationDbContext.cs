@@ -14,8 +14,11 @@ namespace PetsFactory.Data
         {
         }
 
+        // define database objects
         public DbSet<PetsCategory> PetsCategory { get; set; }
         public DbSet<Pets> Pets { get; set; }
         public DbSet<Notifications> Notifications { get; set; }
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
+        public DbSet<Requests> Requests { get; set; }
     }
 }
