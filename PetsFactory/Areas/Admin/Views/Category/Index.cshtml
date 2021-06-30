@@ -1,0 +1,112 @@
+﻿@model IEnumerable<PetsCategory>
+@{
+    ViewData["Title"] = "Pets Categories";
+}
+
+<!-- display alert after "Pets Category" action -->
+@if (TempData["Created"] != null)
+{
+    <script src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.13.0/dist/sweetalert2.all.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            Swal.fire("Success", "@TempData["Created"]", "success");
+        });
+    </script>
+}
+
+<div class="page-wrapper">
+    <!-- Page-header start -->
+    <div class="page-header card">
+        <div class="row align-items-end">
+            <div class="col-lg-8">
+                <div class="page-header-title">
+                    <i class="icofont icofont-table bg-c-blue"></i>
+                    <div class="d-inline">
+                        <h4>@ViewData["Title"]</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="page-header-breadcrumb">
+                    <ul class="breadcrumb-title">
+                        <li class="breadcrumb-item">
+                            <a asp-area="Admin" asp-controller="Home" asp-action="Index">
+                                <i class="icofont icofont-home"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            Categories
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page-header end -->
+
+
+
+    <div class="page-body">
+        <!-- category table card start -->
+        <div class="card">
+            <div class="card-header">
+                <a asp-area="Admin" asp-controller="Category" asp-action="Upsert" class="btn btn-primary rounded">Add New Category <i class="icofont icofont-plus"></i></a>
+
+                <div class="card-header-right">
+                    <ul class="list-unstyled card-option">
+                        <li><i class="icofont icofont-simple-left "></i></li>
+                        <li><i class="icofont icofont-maximize full-card"></i></li>
+                        <li><i class="icofont icofont-minus minimize-card"></i></li>
+                        <li><i class="icofont icofont-refresh reload-card"></i></li>
+                        <li><i class="icofont icofont-error close-card"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-block table-border-style">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr class="bg-dark">
+                                <th>#</th>
+                                <th>Category Name</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int count = 1;
+                            }
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <th scope="row">@count</th>
+                                    <td>@item.CategoryName</td>
+                                    <td>
+                                        <a href="/Admin/Category/Upsert/@item.Id" class="btn btn-success text-white" style="cursor: pointer">
+                                            <i class="icofont icofont-edit f-18"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a onClick=Delete("/Admin/Category/Delete/@item.Id") class="btn btn-danger text-white" style="cursor: pointer">
+                                            <i class="icofont icofont-ui-delete f-18"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                count++;
+                            }
+                            @if (Model.Count() <= 0)
+                            {
+                                <tr class="text-center">
+                                    <td colspan="4">No Data Available</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- category table card end -->
+    </div>
+</div>
