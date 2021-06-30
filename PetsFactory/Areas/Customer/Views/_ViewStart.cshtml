@@ -1,3 +1,15 @@
-﻿@{
-    Layout = "_Layout";
+﻿
+@using PetsFactory.Utils
+@{
+    if (User.IsInRole(Utilities.AdminUser) || User.IsInRole(Utilities.CustomerUser))
+    {
+        // logged in user
+
+        Layout = "_Layout";
+    }
+    else
+    {
+        // user not logged in
+        Layout = "_VisitorLayout";
+    }
 }

@@ -1,14 +1,5 @@
 ﻿@using PetsFactory.Utils
 @{
-    if(User.IsInRole(Utilities.AdminUser) || User.IsInRole(Utilities.CustomerUser)){
-        // logged in user
-
-        Layout = "/Views/Shared/_Layout.cshtml";
-    }
-    else
-    {
-        // user not logged in
-        Layout = "/Views/Shared/_VisitorLayout.cshtml";
-    }
+    Layout = "/Views/Shared/_VisitorLayout.cshtml";
 }
 
