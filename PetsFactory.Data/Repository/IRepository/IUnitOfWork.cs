@@ -12,6 +12,7 @@ namespace PetsFactory.Data.Repository.IRepository
         public INotificationsRepo Notifications { get; }
         public IApplicationUserRepo ApplicationUser { get; }
         public IRequestsRepo Requests { get; }
+        public ITestimonialRepo Testimonial { get; }
 
         void Save();
     }

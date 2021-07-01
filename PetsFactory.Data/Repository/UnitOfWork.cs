@@ -20,6 +20,7 @@ namespace PetsFactory.Data.Repository
             Notifications = new NotificationsRepo(_db);
             ApplicationUser = new ApplicationUserRepo(_db);
             Requests = new RequestsRepo(_db);
+            Testimonial = new TestimonialRepo(_db);
         }
 
         public IPetsCategoryRepo PetsCategory { get; private set; }
@@ -27,6 +28,7 @@ namespace PetsFactory.Data.Repository
         public INotificationsRepo Notifications { get; private set; }
         public IApplicationUserRepo ApplicationUser { get; private set; }
         public IRequestsRepo Requests { get; private set; }
+        public ITestimonialRepo Testimonial { get; private set; }
 
         public void Dispose()
         {

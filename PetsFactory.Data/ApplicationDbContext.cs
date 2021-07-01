@@ -20,5 +20,6 @@ namespace PetsFactory.Data
         public DbSet<Notifications> Notifications { get; set; }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
         public DbSet<Requests> Requests { get; set; }
+        public DbSet<Testimonial> Testimonial { get; set; }
     }
 }
