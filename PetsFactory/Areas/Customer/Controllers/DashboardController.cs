@@ -71,6 +71,7 @@ namespace PetsFactory.Areas.Customer.Controllers
             requestObj.PetId = id;
             requestObj.ApplicationUserId = claims.Value;
             requestObj.DateRequested = DateTime.Now;
+            requestObj.Status = Utilities.RequestPending;
 
             // notifications obj
             Notifications notifications = new Notifications();

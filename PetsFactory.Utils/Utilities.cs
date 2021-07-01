@@ -10,5 +10,10 @@ namespace PetsFactory.Utils
 
         // notifications messages
         public const string RequestNotification = "New Request";
+        public const string RequestAcceptedNotification = "Request Accepted";
+
+        // accept requests
+        public const string Accept = "Accepted";
+        public const string RequestPending = "Pending";
     }
 }

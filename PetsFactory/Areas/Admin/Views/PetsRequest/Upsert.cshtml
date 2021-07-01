@@ -1,0 +1,145 @@
+﻿@model Requests
+@using PetsFactory.Utils
+@{
+    ViewData["Title"] = "Request Details";
+}
+
+<div class="page-wrapper">
+    <!-- Page-header start -->
+    <div class="page-header card">
+        <div class="row align-items-end">
+            <div class="col-lg-8">
+                <div class="page-header-title">
+                    <i class="icofont icofont-file-code bg-c-blue"></i>
+                    <div class="d-inline">
+                        
+                        <h4>@ViewData["Title"]</h4>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="page-header-breadcrumb">
+                    <ul class="breadcrumb-title">
+                        <li class="breadcrumb-item">
+                            <a asp-area="Admin" asp-controller="PetsRequest" asp-action="Index">
+                                <i class="icofont icofont-home"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            @ViewData["Title"]
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page-header end -->
+    <!-- Page body start -->
+    <div class="page-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- category Form Inputs card start -->
+                <div class="card">
+                    <div class="card-header">
+
+                        <span>
+                            Details Section
+                        </span>
+                        <div class="card-header-right">
+                            <i class="icofont icofont-spinner-alt-5"></i>
+                        </div>
+
+                        <div class="card-header-right">
+                            <i class="icofont icofont-spinner-alt-5"></i>
+                        </div>
+
+                    </div>
+                    <div class="card-block">
+                        <h4 class="sub-title">Accept / Decline Pets Request</h4>
+                        <form>
+
+                            <!-- pet name -->
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label" asp-for="Pets.Name"></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"
+                                           asp-for="Pets.Name" placeholder="Pets Name" disabled>
+                                </div>
+                            </div>
+                            <!-- user name -->
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label" asp-for="ApplicationUser.Name"></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"
+                                           asp-for="ApplicationUser.Name" placeholder="User Name" disabled>
+                                </div>
+                            </div>
+
+                            <!-- user email -->
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label" asp-for="ApplicationUser.Email"></label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control"
+                                           asp-for="ApplicationUser.Email" placeholder="User Email" disabled>
+                                </div>
+                            </div>
+
+                            <!-- date requested -->
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label" asp-for="DateRequested"></label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"
+                                           asp-for="DateRequested" placeholder="Date Requested" disabled>
+                                </div>
+                            </div>
+
+                            <a class="btn btn-primary btn-block" asp-area="Customer" asp-controller="Dashboard" asp-action="Details" asp-route-id="@Model.PetId">View Pet Details</a>
+                        </form>
+                        
+                        <div class="d-flex justify-content-around mt-3">
+
+
+                            @if (Model.Status.Equals(Utilities.Accept))
+                            {
+
+
+                                <!-- status accepted -->
+
+                                <a href="#" class="btn btn-success text-white" style="cursor: pointer">
+                                    <i class="icofont icofont-tick-mark f-18"></i>
+                                </a>
+
+                            }
+                            else
+                            {
+                                @if (User.IsInRole(Utilities.AdminUser))
+                                {
+                                    <!-- only admin can accept -->
+                                    <a href="/Admin/PetsRequest/Accept/@Model.Id" class="btn btn-warning text-white" style="cursor: pointer">
+                                        <i class="icofont icofont-warning-alt f-18"></i>
+                                    </a>
+
+                                }
+                                else
+                                {
+                                    <!-- status pending -->
+
+                                    <a href="#" class="btn btn-warning text-white" style="cursor: pointer">
+                                        <i class="icofont icofont-warning-alt f-18"></i>
+                                    </a>
+                                }
+
+
+                            }
+                            <a class="btn btn-dark" asp-action="Index">Back</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- category Form Inputs card end -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Page body end -->
+</div>

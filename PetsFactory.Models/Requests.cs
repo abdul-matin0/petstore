@@ -9,6 +9,11 @@ namespace PetsFactory.Models
     // class to view requests for pets
     public class Requests
     {
+        public Requests()
+        {
+            Status = "";
+        }
+
         [Key]
         public int Id { get; set; }
         // user who made request
@@ -23,6 +28,7 @@ namespace PetsFactory.Models
 
         // date requested
         public DateTime DateRequested { get; set; }
+        public string Status { get; set; }
 
     }
 }

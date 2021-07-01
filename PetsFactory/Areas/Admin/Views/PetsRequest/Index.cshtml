@@ -1,0 +1,147 @@
+﻿@model IEnumerable<Requests>
+@using PetsFactory.Utils
+@{
+    ViewData["Title"] = "Pets Requests";
+}
+
+<!-- display alert after "Pets" action -->
+@if (TempData["Created"] != null)
+{
+    <script src="~/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.13.0/dist/sweetalert2.all.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            Swal.fire("Success", "@TempData["Created"]", "success");
+        });
+    </script>
+}
+
+<div class="page-wrapper">
+    <!-- Page-header start -->
+    <div class="page-header card">
+        <div class="row align-items-end">
+            <div class="col-lg-8">
+                <div class="page-header-title">
+                    <i class="ti-receipt bg-c-blue"></i>
+                    <div class="d-inline">
+                        <h4>@ViewData["Title"]</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="page-header-breadcrumb">
+                    <ul class="breadcrumb-title">
+                        <li class="breadcrumb-item">
+                            <a asp-area="Admin" asp-controller="Home" asp-action="Index">
+                                <i class="icofont icofont-home"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            Requests
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page-header end -->
+
+
+
+    <div class="page-body">
+        <!-- category table card start -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-header-right">
+                    <ul class="list-unstyled card-option">
+                        <li><i class="icofont icofont-simple-left "></i></li>
+                        <li><i class="icofont icofont-maximize full-card"></i></li>
+                        <li><i class="icofont icofont-minus minimize-card"></i></li>
+                        <li><i class="icofont icofont-refresh reload-card"></i></li>
+                        <li><i class="icofont icofont-error close-card"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-block table-border-style">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr class="bg-dark">
+                                <th>#</th>
+                                <th>Pet Name</th>
+                                <th>Date Requested</th>
+                                <th>View</th>
+                                @if (User.IsInRole(Utilities.AdminUser))
+                                {
+                                    <th>Accept</th>
+                                    <th>Delete</th>
+                                }
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int count = 1;
+                            }
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <th scope="row">@count</th>
+                                <td>@item.Pets.Name</td>
+                                <td>@item.DateRequested.ToString("dd MMM yy")</td>
+                                <td>
+                                    <a href="/Admin/PetsRequest/Upsert/@item.Id" class="btn btn-primary text-white" style="cursor: pointer">
+                                        <i class="icofont icofont-eye f-18"></i>
+                                    </a>
+                                </td>
+
+                                @if (User.IsInRole(Utilities.AdminUser))
+                                {
+                                    
+                                    if (item.Status.Equals(Utilities.Accept))
+                                    {
+
+
+                                        <!-- status accepted -->
+                                        <td>
+                                            <a href="#" class="btn btn-success text-white" style="cursor: pointer">
+                                                <i class="icofont icofont-tick-mark f-18"></i>
+                                            </a>
+                                        </td>
+                                    }
+                                    else
+                                    {
+                                        <!-- status pending -->
+                                        <td>
+                                            <a href="/Admin/PetsRequest/Accept/@item.Id" class="btn btn-warning text-white" style="cursor: pointer">
+                                                <i class="icofont icofont-warning-alt f-18"></i>
+                                            </a>
+                                        </td>
+                                    }
+
+
+                                    <td>
+                                        <a onClick=Delete("/Admin/PetsRequest/Delete/@item.Id") class="btn btn-danger text-white" style="cursor: pointer">
+                                            <i class="icofont icofont-ui-delete f-18"></i>
+                                        </a>
+                                    </td>
+                                }
+
+
+                            </tr>
+                                count++;
+                            }
+                            @if (Model.Count() <= 0)
+                            {
+                                <tr class="text-center">
+                                    <td colspan="4">No Requests Available</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- category table card end -->
+    </div>
+</div>
