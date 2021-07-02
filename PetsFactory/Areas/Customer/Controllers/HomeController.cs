@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PetsFactory.Areas.Administrator.Controllers
+namespace PetsFactory.Areas.Customer.Controllers
 {
     [Area("Customer")]
     // all users , including visitors

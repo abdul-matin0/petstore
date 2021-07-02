@@ -21,5 +21,8 @@ namespace PetsFactory.Models
 
         [ForeignKey("CategoryId")]
         public PetsCategory PetCategory { get; set; }
+
+        // date added
+        public DateTime DateAdded { get; set; }
     }
 }

@@ -31,9 +31,37 @@ namespace PetsFactory.Areas.Customer.Controllers
         // view all pets in application
         public IActionResult Index()
         {
-            IEnumerable<Pets> petsObj =_unitOfWork.Pets.GetAll(includeProperties: "PetCategory");
+            DashboardViewModel dashboardVM = new DashboardViewModel()
+            {
+                PetsObj = _unitOfWork.Pets.GetAll(includeProperties: "PetCategory"),
+                DaysPetCount = new Dictionary<string, int>() {
+                    { "Monday", 0},
+                    { "Tuesday", 0},
+                    { "Wednesday", 0},
+                    { "Thursday", 0},
+                    { "Friday", 0},
+                    { "Saturday", 0},
+                    { "Sunday", 0}
+                }
+            };
 
-            return View(petsObj);
+            // if Pets have been created
+            if (dashboardVM.PetsObj != null)
+            {
+                foreach (var item in dashboardVM.PetsObj)
+                {
+                    foreach (var kvp in dashboardVM.DaysPetCount.ToList())
+                    {
+                        if (item.DateAdded.DayOfWeek.ToString().Equals(kvp.Key))
+                        {
+                            dashboardVM.DaysPetCount[kvp.Key]++;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            return View(dashboardVM);
         }
 
         // pet details

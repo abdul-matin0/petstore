@@ -131,6 +131,8 @@ namespace PetsFactory.Areas.Admin.Controllers
                 // create new pet if Id == 0
                 if (petVM.PetsObj.Id == 0)
                 {
+                    petVM.PetsObj.DateAdded = DateTime.Now;
+
                     _unitOfWork.Pets.Add(petVM.PetsObj);
                     TempData["Created"] = "Created Successfully";
                 }

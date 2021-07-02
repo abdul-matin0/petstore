@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Testimonial>
+@{
+    ViewData["Title"] = "Testimonials";
+}
+
+<!-- display alert after "AddTestimonial" action -->
+<script src="~/assets/js/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.13.0/dist/sweetalert2.all.min.js"></script>
+@if (TempData["Success"] != null)
+{
+    <script>
+        $(document).ready(function () {
+            Swal.fire("Success", "@TempData["Success"]", "success");
+        });
+    </script>
+}
+else if (TempData["Error"] != null)
+{
+    <script>
+        $(document).ready(function () {
+            Swal.fire("Error", "@TempData["Error"]", "error");
+        });
+    </script>
+}
+
+<div class="page-wrapper">
+    <!-- Page-header start -->
+    <div class="page-header card">
+        <div class="row align-items-end">
+            <div class="col-lg-8">
+                <div class="page-header-title">
+                    <i class="icofont icofont-comment bg-c-blue"></i>
+                    <div class="d-inline">
+                        <h4>Testimonials</h4>
+                        <span>Testimonials given by our customers, please do leave a testimony for us :) </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="page-header-breadcrumb">
+                    <ul class="breadcrumb-title">
+                        <li class="breadcrumb-item">
+                            <a asp-controller="Dashboard" asp-action="Index">
+                                <i class="icofont icofont-home"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#!">Testimonials</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page-header end -->
+
+    <div class="page-body">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <a asp-area="Customer" asp-controller="Testimonial" asp-action="AddTestimonial" class="btn btn-primary rounded">Add Testimony <i class="icofont icofont-plus"></i></a>
+                </div>
+           </div>
+        </div>
+        <div class="row">
+
+            <!-- display all testimonials cards -->
+            @foreach (var item in Model)
+            {
+                <div class="col-md-6 col-xl-4">
+                    <div class="card dribble-card">
+                        <div class="card-header">
+                            <i class="icofont icofont-speech-comments"></i>
+                            <div class="d-inline-block">
+                                <h5>@item.ApplicationUser.Name</h5>
+                                <span>@item.Pets.Name</span>
+                            </div>
+                        </div>
+                        <div class="card-block text-center">
+                            <div class="row">
+                                <div class="col-12 b-r-default">
+                                    
+                                    <p>@item.CommentMessage</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            <!-- testimonial cards end -->
+        </div>
+    </div>
+</div>

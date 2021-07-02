@@ -109,7 +109,7 @@
                             <li class="user-profile header-notification">
                                 <a href="#!">
                                     
-                                    <span>John Doe</span>
+                                    <span>@User.Identity.Name</span>
                                     <i class="ti-angle-down"></i>
                                 </a>
                                 <ul class="show-notification profile-notification">
@@ -155,8 +155,8 @@
                             <div class="">
                                 <div class="main-menu-header">
                                     
-                                    <div class="user-details">
-                                        <span>@User.Identity.Name</span>
+                                    <div class="user-details d-flex justify-content-around">
+                                        <span>@User.Identity.Name.ToUpper()</span>
                                         <span id="more-details"><i class="ti-angle-down"></i></span>
                                     </div>
                                 </div>
@@ -168,11 +168,11 @@
                                             <a asp-area="Admin" asp-controller="PetsRequest" asp-action="Index"><i class="ti-receipt"></i>Requests</a>
                                             @if (User.IsInRole(Utilities.AdminUser))
                                             {
-                                            <li>
+                                            
                                                 <a asp-area="Admin" asp-controller="Notifications" asp-action="Index">
                                                     <i class="ti-email"></i>Notifications
                                                 </a>
-                                            </li>
+                                            
                                             }
                                             <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
                                                 <i class="ti-layout-sidebar-left"></i>Logout
@@ -231,7 +231,7 @@
                             <!-- admin pets side nav -->
                             <li class="pcoded-hasmenu active">
                                 <a href="javascript:void(0)">
-                                    <span class="pcoded-micon"><i class="ti-support"></i></span>
+                                    <span class="pcoded-micon"><i class="icofont icofont-animal-dog"></i></span>
                                     <span class="pcoded-mtext"
                                           data-i18n="nav.basic-components.main">Pets</span>
                                     <span class="pcoded-mcaret"></span>
@@ -285,7 +285,7 @@
                             <ul class="pcoded-item pcoded-left-item">
                                 <li>
                                     <a asp-area="Customer" asp-controller="Dashboard" asp-action="Index">
-                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                        <span class="pcoded-micon"><i class="icofont icofont-home"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">
                                             Home Dashboard
                                         </span>
@@ -294,7 +294,7 @@
                                 </li>
                                 <li>
                                     <a asp-area="Admin" asp-controller="PetsRequest" asp-action="Index">
-                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                        <span class="pcoded-micon"><i class="icofont icofont-animal-dog-alt"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">
                                             Pets Requests
                                         </span>
@@ -303,7 +303,7 @@
                                 </li>
                                 <li>
                                     <a asp-area="Customer" asp-controller="Testimonial" asp-action="Index">
-                                        <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
+                                        <span class="pcoded-micon"><i class="ti-comment-alt"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">
                                             Testimonials
                                         </span>

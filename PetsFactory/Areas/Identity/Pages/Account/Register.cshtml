@@ -9,6 +9,7 @@
     <form class="md-float-material" asp-route-returnUrl="@Model.ReturnUrl" method="post">
         <div class="text-center">
             <b>PetsFactory</b>
+
         </div>
         
         <div class="auth-box">
@@ -45,11 +46,16 @@
                     <button type="submit" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">Sign up now.</button>
                 </div>
             </div>
+            <div class="row m-t-30 justify-content-center">
+                <div class="col-md-6">
+                    <a asp-area="Identity" asp-page="/Account/Login" class="btn btn-success btn-md shadow text-center m-b-20">Already have an account? Login</a>
+                </div>
+            </div>
             <hr />
+
             <div class="row">
-                <div class="col-md-9">
-                    <p class="text-inverse text-left m-b-0">Thank you and enjoy our website.</p>
-                    <p class="text-inverse text-left"><b>PetsFactory Team</b></p>
+                <div class="col-md-8">
+                    <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn btn-default btn-md shadow text-center mb-2" style="background-color: #fff;">Go back to home page</a>
                 </div>
                 <div class="col-md-2">
                     <b class="text-black-50">PetsFactory</b>

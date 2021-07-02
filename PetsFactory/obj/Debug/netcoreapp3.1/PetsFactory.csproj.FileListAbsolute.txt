@@ -462,3 +462,5 @@ C:\Users\Admin\source\repos\PetsFactory\PetsFactory\obj\Debug\netcoreapp3.1\Razo
 C:\Users\Admin\source\repos\PetsFactory\PetsFactory\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Notifications\Index.cshtml.g.cs
 C:\Users\Admin\source\repos\PetsFactory\PetsFactory\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\PetsRequest\Index.cshtml.g.cs
 C:\Users\Admin\source\repos\PetsFactory\PetsFactory\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\PetsRequest\Upsert.cshtml.g.cs
+C:\Users\Admin\source\repos\PetsFactory\PetsFactory\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Testimonial\AddTestimonial.cshtml.g.cs
+C:\Users\Admin\source\repos\PetsFactory\PetsFactory\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Testimonial\Index.cshtml.g.cs
