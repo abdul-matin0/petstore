@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PetsFactory.Data;
+using PetsFactory.Data.DbDeployment;
 using PetsFactory.Data.Repository;
 using PetsFactory.Data.Repository.IRepository;
 using System;
@@ -44,6 +45,7 @@ namespace PetsFactory
             .AddDefaultTokenProviders();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IDbDeployment, DbDeployment>();
 
             services.ConfigureApplicationCookie(options => {
                 options.LoginPath = $"/Identity/Account/Login";
@@ -56,7 +58,7 @@ namespace PetsFactory
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDbDeployment dbDeployment)
         {
             if (env.IsDevelopment())
             {
@@ -76,6 +78,7 @@ namespace PetsFactory
 
             app.UseAuthentication();
             app.UseAuthorization();
+            dbDeployment.Initialize();
 
             app.UseEndpoints(endpoints =>
             {
