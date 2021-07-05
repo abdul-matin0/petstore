@@ -1,0 +1,9 @@
+C:\Users\Admin\source\repos\PetsFactory\PetsFactory.Utils\bin\Release\netcoreapp3.1\PetsFactory.Utils.deps.json
+C:\Users\Admin\source\repos\PetsFactory\PetsFactory.Utils\bin\Release\netcoreapp3.1\PetsFactory.Utils.dll
+C:\Users\Admin\source\repos\PetsFactory\PetsFactory.Utils\bin\Release\netcoreapp3.1\PetsFactory.Utils.pdb
+C:\Users\Admin\source\repos\PetsFactory\PetsFactory.Utils\obj\Release\netcoreapp3.1\PetsFactory.Utils.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\PetsFactory\PetsFactory.Utils\obj\Release\netcoreapp3.1\PetsFactory.Utils.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\PetsFactory\PetsFactory.Utils\obj\Release\netcoreapp3.1\PetsFactory.Utils.AssemblyInfo.cs
+C:\Users\Admin\source\repos\PetsFactory\PetsFactory.Utils\obj\Release\netcoreapp3.1\PetsFactory.Utils.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\PetsFactory\PetsFactory.Utils\obj\Release\netcoreapp3.1\PetsFactory.Utils.dll
+C:\Users\Admin\source\repos\PetsFactory\PetsFactory.Utils\obj\Release\netcoreapp3.1\PetsFactory.Utils.pdb
