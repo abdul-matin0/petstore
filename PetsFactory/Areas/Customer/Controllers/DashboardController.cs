@@ -90,7 +90,7 @@ namespace PetsFactory.Areas.Customer.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            // get currenrly logged in user
+            // get currently logged in user
             var identity = (ClaimsIdentity)User.Identity;
             var claims = identity.FindFirst(ClaimTypes.NameIdentifier);
 
