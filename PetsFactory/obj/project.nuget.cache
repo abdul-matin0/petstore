@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f5p9Izb1uw1vaFZibOxGTj/ZxbnFBqBQo2wybtHXWLskz77N5IzeGPS7qSFcyy7XbDV+IlHUmejpE+N3ptm++w==",
+  "dgSpecHash": "IK+zcF9G+qljcHlSIwun3Xcyh6WPBiHndjeH9PKL3WxMGaUfInXvMSXSpRJmovMEVZbpy4CoyTYaCdkBdx1KIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory\\PetsFactory.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory\\PetsFactory.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

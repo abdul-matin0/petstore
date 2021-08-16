@@ -6787,11 +6787,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj",
       "projectName": "PetsFactory.Utils",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Utils\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Utils\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

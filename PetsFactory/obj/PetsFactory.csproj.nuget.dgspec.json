@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory\\PetsFactory.csproj": {}
+    "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory\\PetsFactory.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Data\\PetsFactory.Data.csproj": {
+    "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Data\\PetsFactory.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Data\\PetsFactory.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Data\\PetsFactory.Data.csproj",
         "projectName": "PetsFactory.Data",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Data\\PetsFactory.Data.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Data\\PetsFactory.Data.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Data\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj": {
-                "projectPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj"
+              "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj"
               },
-              "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj": {
-                "projectPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj"
+              "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj": {
+    "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj",
         "projectName": "PetsFactory.Models",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Models\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -143,14 +143,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj": {
+    "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj",
         "projectName": "PetsFactory.Utils",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Utils\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Utils\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -207,14 +207,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory\\PetsFactory.csproj": {
+    "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory\\PetsFactory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory\\PetsFactory.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory\\PetsFactory.csproj",
         "projectName": "PetsFactory",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory\\PetsFactory.csproj",
+        "projectPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory\\PetsFactory.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -231,14 +231,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Data\\PetsFactory.Data.csproj": {
-                "projectPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Data\\PetsFactory.Data.csproj"
+              "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Data\\PetsFactory.Data.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Data\\PetsFactory.Data.csproj"
               },
-              "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj": {
-                "projectPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj"
+              "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Models\\PetsFactory.Models.csproj"
               },
-              "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj": {
-                "projectPath": "C:\\Users\\Admin\\source\\repos\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj"
+              "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\Books\\PetsFactory\\PetsFactory.Utils\\PetsFactory.Utils.csproj"
               }
             }
           }
