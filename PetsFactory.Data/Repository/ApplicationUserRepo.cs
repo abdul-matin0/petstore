@@ -11,7 +11,7 @@ namespace PetsFactory.Data.Repository
     //
     // implement Repository Pattern for ApplicationUser
 
-    public class ApplicationUserRepo : Repository<ApplicationUser>, IApplicationUserRepo
+    public class ApplicationUserRepo : Repository<ApplicationDbContext, ApplicationUser>, IApplicationUserRepo
     {
         private readonly ApplicationDbContext _db;
 

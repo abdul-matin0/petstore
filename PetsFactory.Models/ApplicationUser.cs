@@ -12,6 +12,7 @@ namespace PetsFactory.Models
         
         [Required]
         public string Name { get; set; }
+        public string ConnectionString { get; set; }
 
         [NotMapped] 
         // not adding to database

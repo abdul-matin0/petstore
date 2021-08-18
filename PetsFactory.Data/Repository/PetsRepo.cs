@@ -10,7 +10,7 @@ namespace PetsFactory.Data.Repository
 {
     // implement Repository Pattern for Pets
 
-    public class PetsRepo : Repository<Pets>, IPetsRepo
+    public class PetsRepo : Repository<ApplicationDbContext, Pets>, IPetsRepo
     {
         private readonly ApplicationDbContext _db;
 

@@ -10,7 +10,7 @@ namespace PetsFactory.Data.Repository
 {
     // implement Repository Pattern for Notificaitons
 
-    public class NotificationsRepo : Repository<Notifications>, INotificationsRepo
+    public class NotificationsRepo : Repository<ApplicationDbContext, Notifications>, INotificationsRepo
     {
         private readonly ApplicationDbContext _db;
 

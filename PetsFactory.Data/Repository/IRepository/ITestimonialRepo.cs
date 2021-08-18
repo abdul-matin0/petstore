@@ -7,7 +7,7 @@ namespace PetsFactory.Data.Repository.IRepository
 {
     // Testimonial Repository Pattern
 
-    public interface ITestimonialRepo : IRepository<Testimonial>
+    public interface ITestimonialRepo : IRepository<ApplicationDbContext, Testimonial>
     {
         public void Update(Testimonial obj);
     }

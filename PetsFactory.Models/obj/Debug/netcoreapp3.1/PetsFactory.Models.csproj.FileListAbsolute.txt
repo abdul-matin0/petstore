@@ -7,3 +7,12 @@ C:\Users\Admin\source\repos\PetsFactory\PetsFactory.Models\obj\Debug\netcoreapp3
 C:\Users\Admin\source\repos\PetsFactory\PetsFactory.Models\obj\Debug\netcoreapp3.1\PetsFactory.Models.dll
 C:\Users\Admin\source\repos\PetsFactory\PetsFactory.Models\obj\Debug\netcoreapp3.1\PetsFactory.Models.pdb
 C:\Users\Admin\source\repos\PetsFactory\PetsFactory.Models\obj\Debug\netcoreapp3.1\PetsFactory.Models.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\Books\PetsFactory\PetsFactory.Models\bin\Debug\netcoreapp3.1\PetsFactory.Models.deps.json
+C:\Users\Admin\Documents\Books\PetsFactory\PetsFactory.Models\bin\Debug\netcoreapp3.1\PetsFactory.Models.dll
+C:\Users\Admin\Documents\Books\PetsFactory\PetsFactory.Models\bin\Debug\netcoreapp3.1\PetsFactory.Models.pdb
+C:\Users\Admin\Documents\Books\PetsFactory\PetsFactory.Models\obj\Debug\netcoreapp3.1\PetsFactory.Models.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\Books\PetsFactory\PetsFactory.Models\obj\Debug\netcoreapp3.1\PetsFactory.Models.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\Books\PetsFactory\PetsFactory.Models\obj\Debug\netcoreapp3.1\PetsFactory.Models.AssemblyInfo.cs
+C:\Users\Admin\Documents\Books\PetsFactory\PetsFactory.Models\obj\Debug\netcoreapp3.1\PetsFactory.Models.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Books\PetsFactory\PetsFactory.Models\obj\Debug\netcoreapp3.1\PetsFactory.Models.dll
+C:\Users\Admin\Documents\Books\PetsFactory\PetsFactory.Models\obj\Debug\netcoreapp3.1\PetsFactory.Models.pdb

@@ -11,11 +11,11 @@ namespace PetsFactory.Data.Repository
     //
     // implement Repository Pattern for PetsCategory
 
-    public class PetsCategoryRepo : Repository<PetsCategory>, IPetsCategoryRepo
+    public class PetsCategoryRepo : Repository<SecondDbContext, PetsCategory>, IPetsCategoryRepo
     {
-        private readonly ApplicationDbContext _db;
+        private readonly SecondDbContext _db;
 
-        public PetsCategoryRepo(ApplicationDbContext db) : base(db)
+        public PetsCategoryRepo(SecondDbContext db) : base(db)
         {
             _db = db;
         }

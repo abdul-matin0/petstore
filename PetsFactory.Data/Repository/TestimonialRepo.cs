@@ -10,7 +10,7 @@ namespace PetsFactory.Data.Repository
 {
     // implement Repository Pattern for Testimonial
 
-    public class TestimonialRepo : Repository<Testimonial>, ITestimonialRepo
+    public class TestimonialRepo : Repository<ApplicationDbContext, Testimonial>, ITestimonialRepo
     {
         private readonly ApplicationDbContext _db;
 

@@ -10,7 +10,7 @@ namespace PetsFactory.Data.Repository
 {
     // implement Repository Pattern for Requests
 
-    public class RequestsRepo : Repository<Requests>, IRequestsRepo
+    public class RequestsRepo : Repository<ApplicationDbContext, Requests>, IRequestsRepo
     {
         private readonly ApplicationDbContext _db;
 

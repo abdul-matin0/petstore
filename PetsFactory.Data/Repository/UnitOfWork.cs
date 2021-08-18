@@ -9,13 +9,15 @@ namespace PetsFactory.Data.Repository
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _db;
+        private readonly SecondDbContext _dbS;
 
-        public UnitOfWork(ApplicationDbContext db)
+        public UnitOfWork(ApplicationDbContext db, SecondDbContext dbS)
         {
             _db = db;
+            _dbS = dbS;
 
             
-            PetsCategory = new PetsCategoryRepo(_db);
+            PetsCategory = new PetsCategoryRepo(_dbS);
             Pets = new PetsRepo(_db);
             Notifications = new NotificationsRepo(_db);
             ApplicationUser = new ApplicationUserRepo(_db);
@@ -33,11 +35,13 @@ namespace PetsFactory.Data.Repository
         public void Dispose()
         {
             _db.Dispose();
+            _dbS.Dispose();
         }
 
         public void Save()
         {
             _db.SaveChanges();
+            _dbS.SaveChanges();
         }
     }
 }

@@ -47,11 +47,16 @@ namespace PetsFactory
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IDbDeployment, DbDeployment>();
 
+            services.AddHttpContextAccessor();
+            services.AddScoped<DbConnectionInfo>();
+            services.AddScoped<SecondDbContext>();
+
             services.ConfigureApplicationCookie(options => {
                 options.LoginPath = $"/Identity/Account/Login";
                 options.LogoutPath = $"/Identity/Account/Logout";
                 options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
             });
+
 
             services.AddControllersWithViews();
             services.AddRazorPages().AddRazorRuntimeCompilation();

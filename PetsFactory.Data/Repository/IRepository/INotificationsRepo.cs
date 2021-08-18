@@ -7,7 +7,7 @@ namespace PetsFactory.Data.Repository.IRepository
 {
     // Notifications Repository Pattern
 
-    public interface INotificationsRepo : IRepository<Notifications>
+    public interface INotificationsRepo : IRepository<ApplicationDbContext, Notifications>
     {
         public void Update(Notifications obj);
     }

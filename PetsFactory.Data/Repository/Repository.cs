@@ -11,12 +11,14 @@ namespace PetsFactory.Data.Repository
     //<summary>
     // Implement Repository Pattern for data abstraction
 
-    public class Repository<T> : IRepository<T> where T : class
+    public class Repository<TContext, T> : IRepository<TContext, T> 
+        where TContext : DbContext
+        where T : class
     {
-        private readonly ApplicationDbContext _db;
+        private readonly TContext _db;
         internal DbSet<T> dbSet;
 
-        public Repository(ApplicationDbContext db)
+        public Repository(TContext db)
         {
             _db = db;
             this.dbSet = _db.Set<T>();

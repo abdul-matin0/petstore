@@ -7,7 +7,7 @@ namespace PetsFactory.Data.Repository.IRepository
 {
     // Pets Repository Pattern
 
-    public interface IPetsRepo : IRepository<Pets>
+    public interface IPetsRepo : IRepository<ApplicationDbContext, Pets>
     {
         public void Update(Pets petsObj);
     }
